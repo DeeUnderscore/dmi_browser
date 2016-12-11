@@ -1,0 +1,17 @@
+<div class="container box iconview">
+  <canvas #canvas></canvas>
+</div>
+<div class="container box">
+  Zoom:
+  <form>
+    <span *ngFor="let level of zoomLevels; let i = index">
+    <input name="zooms" type="radio"
+        [value]="i"
+        [checked]="i == currentZoomIndex"
+        attr.id="zoom{{i}}"
+        (click)="setZoom(i)">
+    <label attr.for="zoom{{i}}">{{level}}</label>
+    </span>
+  </form>
+  <back-button></back-button>
+</div>

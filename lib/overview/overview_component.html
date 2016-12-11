@@ -1,0 +1,11 @@
+<div id="viewer">
+  <ul>
+    <a class="wrap" *ngFor="let state of states" [routerLink]="['State', {name: state.name}]">
+    <li>
+      <div class="icon"><icon-component [image]="state.thumbnail"></icon-component></div>
+      <div class="name">{{state.name}}</div>
+      <div class="type">{{state | stateTypeName}}</div>
+    </li>
+    </a>
+  </ul>
+</div>

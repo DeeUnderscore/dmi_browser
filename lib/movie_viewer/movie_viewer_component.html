@@ -1,0 +1,33 @@
+<div class="container box">
+<table>
+  <colgroup id="headers">
+    <col>
+    <col>
+  </colgroup>
+
+  <tr *ngIf="state.delays != null">
+    <th colspan="2" class="rightborder">Delays (deciseconds)</th>
+    <td *ngFor="let delay of state.delays" class="delay">{{delay}}</td>
+  </tr>
+
+  <tr *ngFor="let direction of state.icons.keys">
+    <th>{{direction | dirName}}</th>
+    <th class="rightborder">
+      <anim-component *ngIf="state.icons[direction].length > 1"
+        [icons]="state.icons[direction]" [timing]="state.delays"></anim-component>
+      <icon-component *ngIf="state.icons[direction].length == 1"
+        [image]="state.icons[direction][0].image"></icon-component>
+    </th>
+    <td *ngFor="let icon of state.icons[direction]; let i = index">
+      <a class="wrap"
+      [routerLink]="['MovieIcon',
+          {name: state.name,
+           direction: direction.index.toString(),
+           iconNum: i.toString()}]">
+        <icon-component [image]="icon.image"></icon-component>
+      </a>
+    </td>
+  </tr>
+</table>
+</div>
+<div class="container box"><back-button></back-button></div>

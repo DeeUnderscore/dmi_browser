@@ -1,0 +1,22 @@
+<div class="hcentering vcentering"><div class="load container box">
+  <div class="explanatory"><h1>DMI viewer</h1>
+    <p>You can either load a file from disk, or fetch a file from a remote URL. All fetching is done clientside.</p>
+    <p>Please note that downloading from remote hosts will either fail or succeed, depending on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">CORS</a> configuration of the remote host. If you paste a <span class="url">github.com</span> URL (such as from a "Download" button), the tool will attempt to guess the corresponding <span class="url">raw.githubusercontent.com</span> URL and download from that.</p></div>
+  <form id="fileLoad">
+    <div class="label">Pick a file from disk</div>
+    <div class="controls">
+      <input type="file" id="fileField" #fileInput>
+      <button id="fileSubmit" [disabled]="!buttonsEnabled" (click)="fileLoad(fileInput?.files[0])">Load</button>
+    </div>
+  </form>
+  <form id="netLoad">
+    <div class="label">Use a URL</div>
+    <div class="controls">
+      <input type="url" id="urlField" #urlInput>
+      <button id="urlSubmit" [disabled]="!buttonsEnabled" (click)="urlLoad(urlInput.value)">Fetch</button>
+    </div>
+  </form>
+  <div *ngIf="message != null" class="message" [class.error]="error">
+    {{message}}
+  </div>
+</div></div>

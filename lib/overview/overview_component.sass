@@ -1,0 +1,30 @@
+@import "../includes.sass"
+
+ul
+  display: flex
+  flex-wrap: wrap
+
+  li
+    display: flex
+    flex-direction: column
+    background-color: $background-color
+    border: 1px solid $edge-normal-color
+    margin: 0.5em
+    padding: $subthing-pad
+    align-items: center
+    width: 10em
+    transition: border-color $button-fade
+
+    &:hover
+      border-color: $button-hover-color
+
+div.name
+  color: $text-important-color
+  font-size: $font-size-smaller
+
+div.icon
+  padding: 10px
+
+div.type
+  color: $text-normal-color
+  font-size: $font-size-smaller

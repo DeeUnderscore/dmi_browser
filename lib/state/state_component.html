@@ -1,0 +1,5 @@
+<div class="onecol padded">
+  <h1>{{stateName}}</h1>
+  <icon-viewer *ngIf="isStatePixmap()" [icon]="state.icon"></icon-viewer>
+  <movie-viewer *ngIf="isStateMovie()" [state]="state"></movie-viewer>
+</div>

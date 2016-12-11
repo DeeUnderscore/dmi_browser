@@ -1,0 +1,25 @@
+name: dmi_browser
+description: "In-browser BYOND dmi spritesheet viewer"
+version: 0.1.0-pre
+author: Dariusz Anzorge <d.anzorge@gmail.com>
+
+environment:
+  sdk: '>=1.21.0 <2.0.0'
+
+dependencies:
+  angular2: ^2.2.0
+  browser: ^0.10.0
+  dart_to_js_script_rewriter: ^1.0.1
+  dart_sass_transformer: any
+  dmi_read: ^0.1.0
+
+transformers:
+- dart_sass_transformer
+- angular2:
+    entry_points: web/main.dart
+    platform_directives:
+      - 'package:angular2/common.dart#CORE_DIRECTIVES'
+      - 'package:angular2/common.dart#FORM_DIRECTIVES'
+    platform_pipes:
+      - 'package:angular2/common.dart#COMMON_PIPES'
+- dart_to_js_script_rewriter

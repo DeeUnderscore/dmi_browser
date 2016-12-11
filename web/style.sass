@@ -1,0 +1,110 @@
+@import ../lib/includes.sass
+
+$body-font: sans-serif
+
+html
+  height: 100%
+
+body
+  font-family: $body-font
+  font-size: 1em
+  color: $text-normal-color
+  background-color: white
+  line-height: 1.2
+  height: 100%
+  margin: 0
+
+a
+  color: #da750c
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
+
+a.wrap
+  color: inherit
+
+  &:hover
+    text-decoration: inherit
+
+p
+  line-height: 1.4
+  margin: 0
+
+p+p
+  margin-top: 1.4em
+
+h1
+  font-size: 2em
+  font-weight: bold
+  align: center
+  color: $text-important-color
+
+h2
+  font-size: 1.2em
+  font-weight: bold
+  color: $text-important-color
+
+.url
+  font-family: monospace
+
+table
+  border: none
+  border-spacing: 0
+
+th
+td
+  padding: .5em
+  margin: 0
+
+canvas
+  // We don't scale canvases anywhere, but browsers respect the setting when
+  // user zooms the viewport. -moz-crip-edges is a workaround for Fx Bug 856337
+  image-rendering: -moz-crisp-edges
+  image-rendering: pixelated
+
+
+div.container
+  padding: $container-pad
+
+div.container+div.container
+  margin-top: 1em
+
+div.hcentering
+  display: flex
+  justify-content: center
+
+div.vcentering
+  display: flex
+  height: 100%
+  align-items: center
+
+div.onecol
+  display: flex
+  align-items: center
+  flex-direction: column
+
+div.padded
+  padding: .5em
+
+div.box
+  margin: auto
+  background-color: $background-color
+  border: 1px solid $edge-normal-color
+
+
+
+button
+  border: $inside-border
+  background-color: $button-ordinary-color
+  padding: 0.5em 2em
+  transition: background-color $button-fade
+  font-size: $font-size-smaller
+
+  &:hover
+    background-color: #ffc78c
+
+
+
+noscript
+  margin: 3em

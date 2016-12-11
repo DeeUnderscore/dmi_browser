@@ -1,0 +1,39 @@
+@import "../includes.sass"
+
+div.load
+  max-width: 40em
+
+div.explanatory
+  margin-bottom: 2em
+
+form, div.message
+  border: $inside-border
+  display: block
+  width: 90%
+  padding: $subthing-pad
+  margin: auto
+
+  div.label
+    width: 100%
+    vertical-align: middle
+    font-size: .8em
+    color: $text-important-color
+
+  div.controls
+    display: flex
+    align-items: center
+
+    input
+      width: 100%
+
+    button
+      margin-left: .3em
+
+div.message
+  margin-top: 2em
+
+div.error
+  border: 1px solid $edge-error-color
+
+form + form
+  margin-top: 1em
