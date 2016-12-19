@@ -17,6 +17,6 @@ dmi_browser is an Angular2 single page application written in the Dart programmi
 Processing of DMIs is done by the [dmi_read](https://github.com/DeeUnderscore/dmi_read) library.
 
 ## Project
-dmi_browser is free software licensed under the ISC license. For more details, see <LICENSE.md>.
+dmi_browser is free software licensed under the ISC license. For more details, see [LICENSE.md](LICENSE.md).
 
 The project is on Github at [DeeUnderscore/dmi_browser](https://github.com/DeeUnderscore/dmi_browser).
