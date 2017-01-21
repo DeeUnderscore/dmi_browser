@@ -65,7 +65,7 @@ class ReadWrapperService {
   /// URLS.
   String _guessUrl(String url){
     // 1: User, 2: Repo, 3: git ref, 4: filepath
-    final githubRaw = new RegExp(r'://github\.com/(\w+)/(\w+)/raw/(\w+)/([^#?\s]+)');
+    final githubRaw = new RegExp(r'://github\.com/([A-Za-z0-9\-]+)/([A-Za-z0-9\-]+)/raw/(\w+)/([^#?\s]+)');
     final match = githubRaw.firstMatch(url);
 
     if(match != null){
